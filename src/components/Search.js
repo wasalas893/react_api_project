@@ -8,16 +8,17 @@ class Search extends Component{
     getKey(e){
         e.preventDefault();
         const keyType=this.refs.inputword.value;
-        console.log(keyType);
+       
 
 
-
+        
         axios.post('http://localhost:3001/getLocations', {
            city: keyType, 
            
           })
           .then(function (response) {
-            console.log(response);
+              console.log(response)
+            
           })
           .catch(function (error) {
             console.log(error);
@@ -27,6 +28,7 @@ class Search extends Component{
     }
 
     render(){
+       
         return(
 
 
