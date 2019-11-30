@@ -1,4 +1,4 @@
-import React from 'react';
+import React,{Component} from 'react';
 
 import Search from './components/Search';
 
@@ -8,7 +8,9 @@ import SideList from './components/SideList';
 
 import './App.css';
 
-function App() {
+class App extends Component{
+
+    render(){
   return (
    <div className="container">
      <div className="row">
@@ -27,6 +29,7 @@ function App() {
      </div>
    </div>
   );
+    }
 }
 
 export default App;

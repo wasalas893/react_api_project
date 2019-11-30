@@ -6,6 +6,7 @@ import axios from 'axios';
 class Search extends Component{
 
     getKey(e){
+      
         e.preventDefault();
         const keyType=this.refs.inputword.value;
        
