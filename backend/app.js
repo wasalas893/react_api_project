@@ -26,8 +26,8 @@ app.post('/getLocations',(req,res)=>{
     // parsed response body as js object
     console.log(data);
     // raw response
-    console.log(response);
-    //res.json({msg:true,data:data})
+   // console.log(response);
+    res.json({msg:true,data:data})
 });
 })
 
