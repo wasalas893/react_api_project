@@ -9,6 +9,8 @@ class Search extends Component{
       
         e.preventDefault();
         const keyType=this.refs.inputword.value;
+
+      //console.log(keyType);
        
 
 
