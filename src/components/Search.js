@@ -10,6 +10,8 @@ class Search extends Component{
         e.preventDefault();
         const keyType=this.refs.inputword.value;
 
+        const update=this.props;
+
       //console.log(keyType);
        
 
@@ -20,7 +22,9 @@ class Search extends Component{
            
           })
           .then(function (response) {
+            //data tika penwaiii
               console.log(response)
+              update.callUpdate(response.data.data)
             
           })
           .catch(function (error) {

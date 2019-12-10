@@ -6,12 +6,20 @@ class ResultList extends Component{
     
     render(){
 
-        
+     if(this.props.resultPlaces.results!==undefined){
+         
+        var placeList=this.props.resultPlaces.results.map(name=>{
+           
+            return(
+            <li key={name.id}>{name.name}</li>
+            )
+        })
+
+     }
         return(
         <ul>
-           <li>Kandy</li>
-           <li>colombo</li>
-           <li>Kelaniya</li>
+            {placeList}
+           
          </ul>
         )
     }
