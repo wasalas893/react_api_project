@@ -13,7 +13,8 @@ class App extends Component{
   constructor(props){
     super(props)
     this.state={
-      results:{}
+      results:{},
+      saved:[]
     }
   }
 
@@ -28,20 +29,40 @@ class App extends Component{
 
   }
 
+  saveList(name){
+    //console.log(name)
+
+    const places=this.state.saved.concat([name])
+
+    this.setState({
+      saved:places
+    })
+  }
+
     render(){
   return (
    <div className="container">
      <div className="row">
        <div className="col-md-8">
 
-         <Search callUpdate={this.updateState.bind(this)}/>
+         <Search callUpdate={this.updateState.bind(this)}
+         
+          
+        
+        />
 
-         <ResultList resultPlaces={this.state.results}/>
+         <br></br>
+
+         <ResultList resultPlaces={this.state.results}
+          saveList={this.saveList.bind(this)}/>
         
         
        </div>
               <div className="col-md-4">
-               <SideList/>
+
+
+
+               <SideList savedPlaces={this.state.saved}/>
               </div>
 
      </div>
